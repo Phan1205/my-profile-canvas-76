@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: "Về tôi", href: "#about" },
     { name: "Kỹ năng", href: "#skills" },
     { name: "Dự án", href: "#projects" },
+    { name: "Chứng chỉ", href: "#achievements" },
     { name: "Liên hệ", href: "#contact" },
   ];
 

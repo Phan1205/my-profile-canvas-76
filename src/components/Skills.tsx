@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 
 const Skills = () => {
   const skills = [
-    { name: "HTML / CSS", level: 90, color: "hsl(20, 80%, 60%)" },
-    { name: "JavaScript", level: 75, color: "hsl(50, 90%, 55%)" },
-    { name: "C / C++", level: 80, color: "hsl(210, 70%, 55%)" },
-    { name: "Thiết kế UI/UX", level: 70, color: "hsl(340, 80%, 60%)" },
+    { name: "HTML / CSS", level: 40, color: "hsl(20, 80%, 60%)" },
+    { name: "JavaScript", level: 35, color: "hsl(50, 90%, 55%)" },
+    { name: "C / C++", level: 40, color: "hsl(210, 70%, 55%)" },
+    { name: "Thiết kế UI/UX", level: 40, color: "hsl(340, 80%, 60%)" },
   ];
 
   const [animated, setAnimated] = useState(false);

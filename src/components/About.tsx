@@ -1,5 +1,8 @@
 import { Mail, Phone, MapPin, Calendar, GraduationCap, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import groupStudyImg from "@/assets/group-study.jpg";
+import travelFriendsImg from "@/assets/travel-friends.jpg";
+import sunsetImg from "@/assets/sunset.jpg";
 
 const About = () => {
   const info = [
@@ -11,9 +14,9 @@ const About = () => {
   ];
 
   const hobbies = [
-    { icon: "🎵", text: "Nghe nhạc" },
-    { icon: "🏔️", text: "Du lịch tham quan cảnh đẹp" },
-    { icon: "🌅", text: "Ngắm hoàng hôn" },
+    { img: groupStudyImg, text: "Học tập nhóm" },
+    { img: travelFriendsImg, text: "Đi du lịch cùng với bạn bè" },
+    { img: sunsetImg, text: "Ngắm hoàng hôn" },
   ];
 
   return (
@@ -57,10 +60,19 @@ const About = () => {
               {hobbies.map((hobby, index) => (
                 <div 
                   key={index} 
-                  className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-smooth"
+                  className="group relative overflow-hidden rounded-lg bg-secondary/50 hover:bg-secondary transition-smooth"
                 >
-                  <span className="text-4xl">{hobby.icon}</span>
-                  <p className="text-lg font-medium">{hobby.text}</p>
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={hobby.img} 
+                      alt={hobby.text}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                  </div>
+                  <div className="p-4">
+                    <p className="text-lg font-medium">{hobby.text}</p>
+                  </div>
                 </div>
               ))}
             </div>

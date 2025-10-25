@@ -1,6 +1,7 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import profileImg from "@/assets/profile.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -23,6 +24,18 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="animate-fade-in">
+          {/* Profile Image */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-white/20 blur-2xl rounded-full" />
+              <img 
+                src={profileImg} 
+                alt="Phan Minh Hòa" 
+                className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white/30 shadow-glow"
+              />
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
             Phan Minh Hòa
           </h1>
